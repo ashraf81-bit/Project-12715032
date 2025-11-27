@@ -1,0 +1,261 @@
+/* GLOBAL RESETS & FONTS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #fff3f3, #ffeefe);
+    overflow-x: hidden;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+}
+
+.logo {
+    width: 140px;
+}
+
+.menu {
+    width: 40px;
+    cursor: pointer;
+    transition: transform .2s;
+}
+.menu:hover {
+    transform: scale(1.2);
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 70px;
+    background: #ffe7ef;
+    border-radius: 10px;
+    margin: 20px 40px;
+}
+
+.hero-left h1 {
+    font-size: 55px;
+    font-weight: 700;
+}
+
+.hero-left p {
+    width: 80%;
+    margin: 20px 0;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.price {
+    font-size: 35px;
+    color: #ff0084;
+    font-weight: 700;
+}
+
+.btn-primary {
+    margin-top: 15px;
+    background: #ff027f;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #a30254;
+    transition: transform .2s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+}
+
+/* HERO TV ANIMATION */
+.hero-right img {
+    width: 380px;
+    animation: floatTV 4s ease-in-out infinite;
+}
+
+@keyframes floatTV {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* CATEGORY SECTION */
+.categories {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.categories h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.category-box {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.cat-card {
+    width: 150px;
+    height: 130px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.cat-card:hover {
+    transform: translateY(-10px);
+}
+
+.orange { background: #ffa726; }
+.pink { background: #ff4081; }
+.blue { background: #2979ff; }
+
+.cat-card p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+}
+
+/* SECTION TITLE ARROW (SHOES / BACKPACK) */
+.products h2 {
+    background: linear-gradient(to right, #ff4081, #ff80c0);
+    padding: 12px 20px;
+    margin: 60px 0 40px;
+    color: white;
+    font-size: 38px;
+    font-weight: 700;
+    text-align: center;
+
+    /* the arrow */
+    clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+}
+
+/* PRODUCT GRID */
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 0 40px 40px;
+}
+
+.card {
+    width: 300px;
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform .3s, box-shadow .3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 260px;
+    height: auto;
+    margin-bottom: 15px;
+    animation: fadeInScale .6s ease-out;
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.card p {
+    margin: 10px 0 15px;
+    font-size: 13px;
+}
+
+.card h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.btn-dark {
+    background: black;
+    color: white;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-dark:hover {
+    transform: scale(1.1);
+}
+
+/* NEWSLETTER */
+.newsletter {
+    text-align: center;
+    padding: 60px 20px;
+    background: #ffe3ef;
+}
+
+.newsletter h2 {
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.newsletter p {
+    margin: 10px 0 40px;
+    font-weight: 300;
+}
+
+.newsletter-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.newsletter-box input {
+    padding: 15px 20px;
+    width: 450px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.newsletter-box button {
+    background: #ff1b92;
+    padding: 14px 35px;
+    border: none;
+    color: white;
+    font-size: 17px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform .2s;
+    box-shadow: 0 4px #d1006f;
+}
+
+.newsletter-box button:hover {
+    transform: scale(1.07);
+}
