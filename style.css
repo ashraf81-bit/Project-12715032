@@ -1,4 +1,6 @@
-/* GLOBAL RESETS & FONTS */
+/* -------------------------
+   GLOBAL DEFAULTS
+------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -7,16 +9,18 @@
 }
 
 body {
-    background: linear-gradient(to right, #fff3f3, #ffeefe);
-    overflow-x: hidden;
+    background: #fff;
+    color: #111;
 }
 
-/* HEADER */
+/* -------------------------
+   HEADER
+------------------------- */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 50px;
+    padding: 20px 40px;
 }
 
 .logo {
@@ -24,22 +28,19 @@ body {
 }
 
 .menu {
-    width: 40px;
+    width: 35px;
     cursor: pointer;
-    transition: transform .2s;
-}
-.menu:hover {
-    transform: scale(1.2);
 }
 
-/* HERO SECTION */
+/* -------------------------
+   HERO SECTION
+------------------------- */
 .hero {
     display: flex;
     justify-content: space-between;
-    padding: 60px 70px;
-    background: #ffe7ef;
-    border-radius: 10px;
-    margin: 20px 40px;
+    align-items: center;
+    padding: 60px;
+    background: #ffeaf1;
 }
 
 .hero-left h1 {
@@ -48,214 +49,166 @@ body {
 }
 
 .hero-left p {
-    width: 80%;
-    margin: 20px 0;
     font-size: 16px;
-    line-height: 1.4;
+    margin: 15px 0;
 }
 
 .price {
-    font-size: 35px;
-    color: #ff0084;
+    font-size: 28px;
+    color: #ff3c9d;
     font-weight: 700;
+    margin: 10px 0;
 }
 
-.btn-primary {
-    margin-top: 15px;
-    background: #ff027f;
-    padding: 12px 28px;
-    border: none;
-    border-radius: 8px;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 4px 0 #a30254;
-    transition: transform .2s;
-}
-
-.btn-primary:hover {
-    transform: translateY(-4px);
-}
-
-/* HERO TV ANIMATION */
-.hero-right img {
-    width: 380px;
-    animation: floatTV 4s ease-in-out infinite;
-}
-
-@keyframes floatTV {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-}
-
-/* CATEGORY SECTION */
+/* -------------------------
+   CATEGORY SECTION
+------------------------- */
 .categories {
     text-align: center;
-    padding: 50px 0;
-}
-
-.categories h2 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 40px;
+    padding: 60px 20px;
 }
 
 .category-box {
     display: flex;
     justify-content: center;
-    gap: 80px;
+    gap: 60px;
+    margin-top: 40px;
 }
 
 .cat-card {
-    width: 150px;
-    height: 130px;
-    border-radius: 30px;
+    width: 160px;
+    height: 150px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     cursor: pointer;
-    transition: transform .3s;
+    transition: 0.3s;
 }
+
+.cat-card img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.cat-card.orange { background: #ffa000; }
+.cat-card.pink   { background: #ff5ea0; }
+.cat-card.blue   { background: #2d8cff; }
 
 .cat-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
 }
 
-.orange { background: #ffa726; }
-.pink { background: #ff4081; }
-.blue { background: #2979ff; }
-
-.cat-card p {
-    margin-top: 10px;
-    font-size: 18px;
-    color: black;
-    font-weight: 600;
-}
-
-/* SECTION TITLE ARROW (SHOES / BACKPACK) */
+/* -------------------------
+   SECTION TITLE BAR (Shoes, Backpack)
+------------------------- */
 .products h2 {
-    background: linear-gradient(to right, #ff4081, #ff80c0);
-    padding: 12px 20px;
-    margin: 60px 0 40px;
-    color: white;
-    font-size: 38px;
-    font-weight: 700;
+    width: 100%;
     text-align: center;
-
-    /* the arrow */
+    font-size: 40px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ff5ea0, #ff2d92, #ff5ea0);
+    color: white;
+    padding: 15px 0;
+    margin: 60px 0 40px;
     clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
 }
 
-/* PRODUCT GRID */
+/* -------------------------
+   PRODUCT GRID
+------------------------- */
 .product-grid {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    padding: 0 40px 40px;
+    gap: 50px;
+    padding-bottom: 60px;
 }
 
 .card {
     width: 300px;
+    padding: 20px;
     background: white;
-    padding: 25px;
     text-align: center;
-    border-radius: 10px;
-    transition: transform .3s, box-shadow .3s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
 .card img {
     width: 260px;
     height: auto;
-    margin-bottom: 15px;
-    animation: fadeInScale .6s ease-out;
-}
-
-@keyframes fadeInScale {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
 }
 
 .card h3 {
-    font-size: 18px;
     margin-top: 10px;
+    font-size: 18px;
 }
 
 .card p {
-    margin: 10px 0 15px;
-    font-size: 13px;
+    font-size: 14px;
+    margin: 6px 0 12px;
 }
 
 .card h4 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
 }
 
-.btn-dark {
-    background: black;
-    color: white;
-    padding: 10px 24px;
-    border: none;
-    border-radius: 5px;
-    font-size: 13px;
-    cursor: pointer;
-    transition: .2s;
-}
-
-.btn-dark:hover {
-    transform: scale(1.1);
-}
-
-/* NEWSLETTER */
+/* -------------------------
+   NEWSLETTER
+------------------------- */
 .newsletter {
     text-align: center;
-    padding: 60px 20px;
-    background: #ffe3ef;
-}
-
-.newsletter h2 {
-    font-size: 38px;
-    font-weight: 700;
-}
-
-.newsletter p {
-    margin: 10px 0 40px;
-    font-weight: 300;
+    padding: 80px 20px;
+    background: #ffeaf1;
 }
 
 .newsletter-box {
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
 .newsletter-box input {
-    padding: 15px 20px;
     width: 450px;
-    font-size: 16px;
+    padding: 14px 20px;
+    border-radius: 10px;
     border: 2px solid black;
-    border-radius: 10px;
+    font-size: 16px;
 }
 
-.newsletter-box button {
-    background: #ff1b92;
-    padding: 14px 35px;
-    border: none;
+/* -------------------------
+   NEON TICKET BUTTONS
+------------------------- */
+.btn-neon {
+    background: #ff3c9d;
+    padding: 14px 40px;
     color: white;
-    font-size: 17px;
+    font-weight: 700;
+    font-size: 16px;
+    border: 3px solid black;
     border-radius: 10px;
-    font-weight: 600;
     cursor: pointer;
-    transition: transform .2s;
-    box-shadow: 0 4px #d1006f;
+    position: relative;
+    transition: 0.2s ease;
 }
 
-.newsletter-box button:hover {
-    transform: scale(1.07);
+.btn-neon::before,
+.btn-neon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 14px;
+    height: 70%;
+    transform: translateY(-50%);
+    border: 3px solid black;
+    border-radius: 6px;
+}
+
+.btn-neon::before { left: -10px; }
+.btn-neon::after  { right: -10px; }
+
+.btn-neon:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 0 #a30055;
 }
